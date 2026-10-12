@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookMyTrip</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image/my thing.png">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="top-header">
+
+        <div class="logo">
+            <img src="image/logo.jpg" alt="BookMyTrip logo">
+            <h1>BookMy<span>trip.</span></h1>
+        </div>
+
+        <div class="support">
+            <p>Call support</p>
+            <a href="tel:+914412345678">+91 (91) 1234 5678</a>
+        </div>
+
+        <form class="top-search" id="siteSearch">
+            <input type="text" id="searchText"
+                   placeholder="Search website"
+                   aria-label="Search website">
+            <button type="submit">Search</button>
+        </form>
+
+        <button type="button" class="menu-button" id="menuButton">
+            Menu
+        </button>
+
+    </header>
+
+    <nav class="navigation">
+
+        <div class="nav-links" id="navigation">
+            <a href="#hotels">Hotels</a>
+            <a href="#deals">Flights</a>
+            <a href="#deals">Vacations</a>
+            <a href="#deals">Hot Deals</a>
+            <a href="#blogs">Travel Guides</a>
+            <a href="#blogs">Blogs</a>
+        </div>
+
+        <div class="account-links">
+            <a href="#booking">Sign Up</a>
+            <a href="#booking">My Account</a>
+        </div>
+
+    </nav>
+
+    <section class="hero">
+
+        <img class="hero-image"
+             src="image/rooms.jpg"
+             alt="Holiday destination">
+
+        <div class="hero-caption">
+            <h2>Discover Beautiful Places</h2>
+
+            <p>
+                Explore wonderful destinations, comfortable hotels
+                and memorable holiday experiences.
+            </p>
+
+            <div class="hero-price">
+                <strong>1200</strong>
+                <span>Inclusive of food and dinner</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="booking" id="booking">
+
+        <h2>Book Your Trip</h2>
+
+        <form id="bookingForm">
+
+            <div class="booking-field">
+                <label for="tripType">What?</label>
+                <select id="tripType">
+                    <option>Hotels</option>
+                    <option>Flights</option>
+                    <option>Vacations</option>
+                </select>
+            </div>
+
+            <div class="booking-field">
+                <label for="destination">Where?</label>
+                <input type="text" id="destination"
+                       placeholder="Enter destination" required>
+            </div>
+
+            <div class="booking-field">
+                <label for="travelDate">When?</label>
+                <input type="date" id="travelDate" required>
+            </div>
+
+            <div class="booking-field">
+                <label for="rooms">Rooms</label>
+                <select id="rooms">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+
+            <div class="booking-field">
+                <label for="adults">Adults</label>
+                <select id="adults">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+
+            <div class="booking-field">
+                <label for="children">Children</label>
+                <select id="children">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+
+            <button type="submit" class="search-button">
+                Search
+            </button>
+
+        </form>
+
+        <p id="bookingMessage" class="message" aria-live="polite"></p>
+
+    </section>
+
+    <section class="page-section" id="hotels">
+
+        <div class="section-heading">
+            <div>
+                <h2>Popular Hotels</h2>
+                <p>Find a comfortable place for your next trip.</p>
+            </div>
+
+            <div class="slide-buttons">
+                <button type="button" id="previousHotel">Previous</button>
+                <button type="button" id="nextHotel">Next</button>
+            </div>
+        </div>
+
+        <div class="hotel-list" id="hotelList">
+
+            <div class="hotel-card">
+                <img src="image/rooms.jpg" alt="Hotel Taj Palace">
+
+                <div class="hotel-details">
+                    <div>
+                        <h3>Hotel Taj Palace</h3>
+                        <p>Mumbai, India</p>
+                    </div>
+                    <strong>2000</strong>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="image/drink1.jpg" alt="Mont Blanc hotel">
+
+                <div class="hotel-details">
+                    <div>
+                        <h3>Mont Blanc</h3>
+                        <p>Zurich, Switzerland</p>
+                    </div>
+                    <strong>3200</strong>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="image/hotal.jpg" alt="Hotel Marriott">
+
+                <div class="hotel-details">
+                    <div>
+                        <h3>Hotel Marriott</h3>
+                        <p>Melbourne, Australia</p>
+                    </div>
+                    <strong>1200</strong>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="page-section" id="deals">
+
+        <div class="section-heading">
+            <div>
+                <h2>Hot Deals</h2>
+                <p>Special offers for your next holiday.</p>
+            </div>
+        </div>
+
+        <div class="deal-list">
+
+            <div class="deal-card">
+                <img src="image/hotal.jpg" alt="Holiday offer">
+
+                <div class="deal-caption">
+                    <p>Special Offer</p>
+                    <h3>Paris Eurostar Breaks</h3>
+                    <span>Holiday packages from 350</span>
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="image/rooms.jpg" alt="Beach holiday">
+
+                <div class="deal-caption">
+                    <p>Travel and Relax</p>
+                    <h3>Beachside Escapes</h3>
+                    <span>Discover your next holiday</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="page-section blog-strip" id="blogs">
+        <h2>Latest Blogs</h2>
+        <span>|</span>
+        <a href="#hotels">Best places to visit in India</a>
+    </section>
+
+    <footer>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="#blogs">About the company</a>
+            <a href="#blogs">Terms and Conditions</a>
+            <a href="#blogs">Privacy Policy</a>
+            <a href="#blogs">Careers</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+            <a href="tel:+919942840159">Contact</a>
+            <a href="#booking">FAQ</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#blogs">f</a>
+                <a href="#blogs">X</a>
+                <a href="#blogs">in</a>
+            </div>
+        </div>
+
+        <div class="footer-column newsletter">
+            <h3>Deals and Offers</h3>
+
+            <form id="newsletterForm">
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+                <button type="submit">register</button>
+            </form>
+
+            <p id="newsletterMessage" aria-live="polite"></p>
+        </div>
+
+        <p class="copyright">
+            Copyright &copy; <span id="year"></span> BookMyTrip.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
